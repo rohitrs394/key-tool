@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Key Generator</title>
+<style>
+body { background: #000; color: #0f0; font-family: monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+.box { border: 2px solid #0f0; padding: 40px; text-align: center; }
+input { background: #000; border: 1px solid #0f0; color: #0f0; padding: 10px; width: 250px; text-align: center; margin: 10px 0; display: block; }
+button { background: #0f0; border: none; color: #000; padding: 10px 30px; cursor: pointer; font-weight: bold; }
+#msg { margin-top: 20px; color: #0f0; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Key Validator</h2>
+<input type="text" id="key" placeholder="Enter any key">
+<button onclick="check()">CHECK KEY</button>
+<div id="msg"></div>
+</div>
+
+<script>
+function check() {
+  var k = document.getElementById('key').value;
+  if(k == "") { alert("Key daaliye!"); return; }
+  document.getElementById('msg').innerHTML = "Connecting...<br>Key: " + k + "<br>Status: ✓ SUCCESS";
+  setTimeout(function() {
+    window.location.href = "https://www.google.com";
+  }, 2000);
+}
+</script>
+</body>
+</html>
